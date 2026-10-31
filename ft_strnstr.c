@@ -6,20 +6,18 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:44:03 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 16:49:26 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 18:05:29 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *big, char *little, int len)
+static void	check(char *big, char *little, int len)
 {
 	int	i;
 	int	j;
 	int	mark;
 
-	if (!big || !little)
-		return (NULL);
 	i = 0;
 	j = 0;
 	mark = 0;
@@ -34,11 +32,26 @@ char	*ft_strnstr(char *big, char *little, int len)
 				j++;
 			}
 			if (little[j] == '\0')
-				return (&big[mark]);
+				return (mark);
 			j = 0;
 		}
 		i++;
 		len--;
 	}
-	return(big);
+	return (0);
+}
+
+char	*ft_strnstr(char *big, char *little, int len)
+{
+	int	i;
+
+	if (!big)
+		return (NULL);
+	if (!little)
+		return (big);
+	i = 0;
+	i = check(big.little, len);
+	if (i)
+		return (&big[i]);
+	return (NULL);
 }

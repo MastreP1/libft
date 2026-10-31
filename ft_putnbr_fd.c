@@ -25,6 +25,6 @@ void	ft_putnbr_fd(int n, int fd)
 		n = n / 10;
 	}
 	n = n + 48;
-	write(1,&n,1);
+	write(1, &n, 1);
 	return ;
 }

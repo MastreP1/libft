@@ -148,15 +148,15 @@ To integrate `libft.a` into another C program:
 
 ---
 
-## Resources & AI Usage Statement
+## Resources
 
-### References & Documentation
-* **Linux Programmer's Manual:** Standard man pages (`man 3 strlen`, `man 3 memcpy`, `man 3 malloc`, `man 2 write`).
-* **The Linux Programming Interface (Michael Kerrisk):** System architecture guide for UNIX I/O, file descriptors, and process memory layout.
-* **BSD Library Extensions:** Documentation regarding `strlcpy`, `strlcat`, and `bzero` implementations in BSD libc versus GNU libc (`glibc`).
+[Pythontutor a AI powered debugging tool](https://pythontutor.com/)
+[Make Tutorial](https://makefiletutorial.com/)
+[Manual Archive](https://man7.org/)
+
 
 ### AI Usage Statement
 In accordance with the 42 AI Directives outlined in Chapter III:
 * **Purpose of AI Tools:** Artificial intelligence was utilized strictly as an educational sparring partner to discuss theoretical concepts (such as process memory segmentation, pointer math, and Makefile dependency chains).
 * **Scope of Tasks:** AI assistance was consulted for explaining standard library behaviors, formatting Markdown documentation, and identifying potential edge cases in algorithmic slicing (such as boundary conditions in `ft_strtrim` and `ft_split`).
-* **Integrity & Understanding:** All code logic, memory architectures, and function implementations were written, verified, and comprehended directly by the student to ensure genuine technical mastery and full readiness for peer evaluations and whiteboard defenses.
+* **Integrity & Understanding:** All code logic, memory architectures, and function implementations were written, verified, and comprehended directly by the student to ensure genuine technical mastery and full readiness for peer evaluations and whiteboard defenses.b 

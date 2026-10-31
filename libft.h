@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 08:11:44 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 17:13:39 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 17:53:26 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 unsigned int		ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_putchar_fd(char c, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 #endif
