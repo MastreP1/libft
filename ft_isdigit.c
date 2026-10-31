@@ -6,24 +6,13 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:02 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:14:39 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:01:34 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int str)
 {
-	int	i;
-
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (str[i] < 48 && str[i] > 57)
-	{
-		i++;
-	}
-	if (str[i] == '\0')
-		return (1);
-	return (0);
+	return ((str < 48) && (str > 57));
 }

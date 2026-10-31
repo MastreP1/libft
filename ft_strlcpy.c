@@ -6,13 +6,13 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:41 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:57:33 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:19:19 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strlen(char *s)
+static int	f_strlen(char *s)
 {
 	int	i;
 
@@ -30,9 +30,9 @@ int	ft_strlcpy(char *src, char *dest, size_t buffer)
 	int	src_len;
 
 	if (!src || !dest)
-		return (NULL);
+		return (0);
 	i = 0;
-	src_len = ft_strlen(src);
+	src_len = f_strlen(src);
 	if (buffer <= 0)
 		return (0);
 	while (buffer > 1 && src[i])

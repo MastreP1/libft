@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 09:13:28 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 07:44:17 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 17:24:03 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	while (n > 9)
 	{
-		ft_putchar_fd((n % 10) + 48, fd);
+		ft_putchar_fd((n % 10), fd);
 		n = n / 10;
 	}
-	ft_putnbr_fd((n + 48), fd);
+	n = n + 48;
+	write(1,&n,1);
 	return ;
 }

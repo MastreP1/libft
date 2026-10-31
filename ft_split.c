@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 11:04:15 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:45:43 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:52:22 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static size_t	word(char const *s, char c)
 	return (j + 1);
 }
 
-static void	*allocation(char **a, char const *s, char c)
+static void	allocation(char **a, char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -86,7 +86,6 @@ static void	*allocation(char **a, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
 	int		position;
 	size_t	j;
 	char	**array;
@@ -96,7 +95,6 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	position = 0;
-	i = 0;
 	j = 0;
 	allocation(array, s, c);
 	copy(s, c, array);

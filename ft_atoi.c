@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 14:47:22 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:09:16 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:50:04 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *text)
 	i = 0;
 	sign = 1;
 	if (!text)
-		return (NULL);
+		return (0);
 	while ((text[i] >= 9 && text[i] <= 13) || text[i] == 32)
 		i++;
 	if (text[i] == '-')

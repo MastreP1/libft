@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:27:51 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:22:42 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:23:37 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(void *b, int c, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	if (!b)
 		return (NULL);
@@ -23,7 +23,7 @@ void	*ft_memchr(void *b, int c, size_t len)
 	{
 		if (((unsigned char *)b)[i] == (unsigned char)c)
 		{
-			return (&b[i]);
+			return (((unsigned char *)b + i));
 		}
 		i++;
 	}

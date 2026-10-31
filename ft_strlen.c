@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:48 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:58:27 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:03:24 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	int	i;
 
 	if (!str)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (str[i])
 	{

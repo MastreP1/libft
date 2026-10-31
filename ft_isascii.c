@@ -6,24 +6,14 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 13:46:36 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:14:36 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:01:17 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char *str)
+int	ft_isascii(int str)
 {
-	int	i;
-
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (str[i] >= 0 && str[i] <= 127)
-	{
-		i++;
-	}
-	if (str[i] == '\0')
-		return (1);
-	return (0);
+	return ((str >= 0) && (str <= 127));
 }
+

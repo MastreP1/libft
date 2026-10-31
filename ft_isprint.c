@@ -6,24 +6,13 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:09 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/31 14:14:43 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:03:02 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char *str)
+int	ft_isprint(int str)
 {
-	int	i;
-
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (str[i] >= 33 && str[i] <= 127)
-	{
-		i++;
-	}
-	if (str[i] == '\0')
-		return (1);
-	return (0);
+	return ((str >= 33) && (str <= 127));
 }

@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 10:12:54 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 18:24:41 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:21:00 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ unsigned char	ft_toupper(int c)
 	{
 		c = c - 32;
 	}
-	else
-		return (c);
+	return (c);
 }
