@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:44:03 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 08:11:27 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 15:06:06 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 char	*ft_strnstr(char *big, char *little, int len)
 {
-	int i = 0;
-	int j = 0;
-	int mark = 0;
+	int	i;
+	int	j;
+	int	mark;
+
+	if (!big || !little)
+		return (NULL);
+	i = 0;
+	j = 0;
+	mark = 0;
 	while (big[i])
 	{
 		if (big[i] == little[j])
@@ -28,9 +34,7 @@ char	*ft_strnstr(char *big, char *little, int len)
 				j++;
 			}
 			if (little[j] == '\0')
-			{
 				return (&big[mark]);
-			}
 			j = 0;
 		}
 		i++;

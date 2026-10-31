@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:37 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 08:11:04 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:56:09 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_strlcat(char *src, char *dest, int size)
 	int	len_src;
 	int	len_dest;
 
+	if (!src || !dest)
+		return (NULL);
 	i = 0;
 	len_src = ft_len(src);
 	len_dest = ft_len(dest);

@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:44:11 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 08:11:29 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 15:02:08 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 char	*ft_strrchr(char *s, int c)
 {
-	int i = 0;
-	int mark = '\0';
+	int	i;
+	int	mark;
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	mark = '\0';
 	while (s[i])
 	{
 		if (s[i] == c)

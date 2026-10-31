@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 11:12:51 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 06:43:35 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:17:15 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!lst || !new)
+		return (NULL);
 	last = ft_lstlast(*lst);
 	last->next = new;
 }

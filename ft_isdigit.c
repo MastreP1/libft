@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:02 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 06:19:48 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:14:39 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isdigit(char *str)
 	int	i;
 
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (str[i] < 48 && str[i] > 57)
 	{

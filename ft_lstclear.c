@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 11:26:48 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 07:41:39 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:18:12 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*follow;
 
+	if (!lst || !del)
+		return (NULL);
 	current = *lst;
 	while (current != NULL)
 	{

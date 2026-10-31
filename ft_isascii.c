@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 13:46:36 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 06:19:21 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:14:36 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isascii(char *str)
 	int	i;
 
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (str[i] >= 0 && str[i] <= 127)
 	{

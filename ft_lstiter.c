@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 13:43:51 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 06:52:09 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:19:18 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
 
+	if (!lst || !f)
+		return (NULL);
 	current = lst;
 	while (current != NULL)
 	{

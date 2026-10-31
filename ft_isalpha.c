@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 13:46:34 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/28 16:14:51 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:14:31 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalpha(char *str)
 	int	i;
 
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (str[i] < 65 && str[i] > 90 || str[i] < 97 && str[i] > 122)
 	{

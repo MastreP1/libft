@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 10:59:43 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 07:41:14 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:32:02 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	int	i;
 	int	rev;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	rev = len - 1;
 	while (len > 0)

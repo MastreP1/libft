@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:25:08 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/29 08:37:45 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:10:41 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_bzero(void *dest, int c)
 {
-	if (!dest || !c)
-		return (malloc(0));
+	if (!dest)
+		return (NULL);
 	return (ft_memset(dest, 0, c));
 }

@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 10:37:35 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/29 09:20:49 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:12:45 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_calloc(size_t number, size_t size)
 	if (size != 0 && total / size == number)
 	{
 		array = malloc(number * size);
+		if (!array)
+			return (NULL);
 		ft_bzero(array, number * size);
 	}
 	else

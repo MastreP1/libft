@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:43:41 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 08:10:59 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:57:33 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	ft_strlcpy(char *src, char *dest, size_t buffer)
 	int	i;
 	int	src_len;
 
+	if (!src || !dest)
+		return (NULL);
 	i = 0;
 	src_len = ft_strlen(src);
 	if (buffer <= 0)
-	{
 		return (0);
-	}
 	while (buffer > 1 && src[i])
 	{
 		dest[i] = src[i];

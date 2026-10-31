@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 11:22:51 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 06:52:03 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:18:40 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return (NULL);
 	del(lst->content);
 	free(lst);
 }

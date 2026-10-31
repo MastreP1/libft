@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 08:32:45 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 07:43:19 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 11:14:18 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	char	*p;
+
+	p = &c;
+	write(fd, p, 1);
 	return ;
 }

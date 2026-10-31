@@ -6,7 +6,7 @@
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 09:12:01 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 07:43:30 by omejri           ###   ########.fr       */
+/*   Updated: 2026/10/31 14:40:38 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
 		write(fd, s + i, 1);
+		i++;
 	}
 	write(fd, "\n", 1);
 	return ;

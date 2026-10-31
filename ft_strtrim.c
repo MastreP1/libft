@@ -5,70 +5,60 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: omejri <omejri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/16 12:40:51 by omejri            #+#    #+#             */
-/*   Updated: 2026/10/30 08:11:45 by omejri           ###   ########.fr       */
+/*   Created: 2026/10/31 10:13:23 by omejri            #+#    #+#             */
+/*   Updated: 2026/10/31 15:02:33 by omejri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char	*new_str(const char *s1, size_t start, size_t len)
 {
-	size_t s_len = ft_strlen(s1);
-	int i = 0;
-	int j = 0;
-	int found = 0;
-	int mark = 0;
-	int mark1 = 0;
-	while (s1[i])
-	{
-		found = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-			{
-				mark = i;
-				found = 1;
-			}
-			j++;
-		}
-		if (!found)
-		{
-			break ;
-		}
-		i++;
-	}
-	i = s_len - 1;
-	j = 0;
-	while (s1[i])
-	{
-		found = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-			{
-				mark1 = i;
-				found = 1;
-			}
-			j++;
-		}
-		if (!found)
-		{
-			break ;
-		}
-		i++;
-	}
+	char	*str;
+	size_t	i;
 
-	char *array = malloc(mark1 - mark);
-	if (!array)
+	if (len <= 0 || start >= ft_strlen(s1))
 		return (ft_strdup(""));
-	i = mark;
-	j = 0;
-	while (i <= mark1 && s1[i])
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		array[j] = s1[i];
+		str[i] = s1[start + i];
 		i++;
-		j++;
 	}
-	return (array);
+	return (str);
+}
+
+static int	to_trim(const char *set, char c)
+{
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(const char *s1, const char *set)
+{
+	int	i;
+	int	j;
+
+	if (!s1 || !set)
+		return (NULL);
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
+	while (to_trim(set, s1[i]))
+		i++;
+	while (to_trim(set, s1[j]))
+		j--;
+	return (new_str(s1, i, j - (i - 1)));
 }
