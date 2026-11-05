@@ -19,7 +19,7 @@ void	*ft_memset(void *s, const int c, size_t n)
 	i = 0;
 	while (n > 0)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		((char *)s)[i] = (char)c;
 		n--;
 		i++;
 	}

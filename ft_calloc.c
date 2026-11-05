@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t n, size_t size)
 {
 	void	*array;
 
-	if (nelem == 0)
+	if (n == 0 || size == 0)
 		return (malloc(1));
-	if (elsize != 0 && (nelem * elsize) / elsize != nelem)
+	if (size != 0 && (n * size) / size != n)
 		return (NULL);
-	array = malloc(nelem * elsize);
+	array = malloc(n * size);
 	if (!array)
 		return (NULL);
-	ft_bzero(array, nelem * elsize);
+	ft_bzero(array, n * size);
 	return (array);
 }

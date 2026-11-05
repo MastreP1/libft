@@ -23,12 +23,12 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	{
 		if (s1 < s2)
 		{
-			((unsigned char *)s1)[i] = ((unsigned char *)s2)[i];
+			((char *)s1)[i] = ((char *)s2)[i];
 			i++;
 		}
 		if (s1 > s2)
 		{
-			((unsigned char *)s1)[rev] = ((unsigned char *)s2)[rev];
+			((char *)s1)[rev] = ((char *)s2)[rev];
 			rev--;
 		}
 		n--;
